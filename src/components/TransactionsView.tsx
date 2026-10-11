@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, ArrowUpDown, Trash2, Edit2, Plus, Calendar } from 'lucide-react';
+import { Search, Trash2, Edit2, Plus } from 'lucide-react';
 import { useFinance } from '../context/FinanceContext';
 import { Transaction, TransactionCategory } from '../types';
 import { formatINR } from '../utils/calculations';

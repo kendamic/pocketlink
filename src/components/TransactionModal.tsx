@@ -29,7 +29,7 @@ export const TransactionModal: React.FC<TransactionModalProps> = ({
   const [name, setName] = useState('');
   const [amount, setAmount] = useState('');
   const [category, setCategory] = useState<TransactionCategory>('Food');
-  const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+  const [date, setDate] = useState(() => new Date().toISOString().split('T')[0]);
   const [paymentMethod, setPaymentMethod] = useState<'UPI' | 'Card' | 'Cash' | 'NetBanking'>('UPI');
   const [note, setNote] = useState('');
   const [error, setError] = useState('');

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { Sliders, TrendingUp, TrendingDown, HelpCircle, ArrowRight } from 'lucide-react';
+import { Sliders } from 'lucide-react';
 import { useFinance } from '../context/FinanceContext';
 import { formatINR } from '../utils/calculations';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from 'recharts';
 
 export const RippleEffect: React.FC = () => {
   const {
-    budget,
     availableBalance,
     safeToSpend,
     remainingDays,
@@ -47,7 +46,7 @@ export const RippleEffect: React.FC = () => {
     {
       name: 'Safe Daily Limit',
       Baseline: safeToSpend,
-      Simulated: Math.max(0, safeToSpend - dailyDelta + Math.floor(projectedFoodSaved / remainingDays)),
+      Simulated: projectedSafeToSpend,
     },
     {
       name: 'End Period Buffer',

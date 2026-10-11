@@ -138,4 +138,10 @@ describe('PocketPilot Calculation QA Suite', () => {
     const safe = calculateSafeToSpend(mockBudget, tx, comms, goals, 10);
     assert.strictEqual(safe, 800);
   });
+
+  it('INR currency formatter formats correctly with Indian numbering system', () => {
+    assert.strictEqual(formatINR(10000), '₹10,000');
+    assert.strictEqual(formatINR(125000), '₹1,25,000');
+    assert.strictEqual(formatINR(-500), '-₹500');
+  });
 });

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight, CheckCircle2, RotateCcw, AlertTriangle, Info, Plus } from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle2, RotateCcw, Info, Plus } from 'lucide-react';
 import { useFinance } from '../context/FinanceContext';
 import { formatINR, calculatePercentage } from '../utils/calculations';
 import { TransactionCategory } from '../types';
@@ -19,9 +19,6 @@ const CATEGORIES: TransactionCategory[] = [
 export const VibeCheck: React.FC = () => {
   const {
     budget,
-    transactions,
-    commitments,
-    goals,
     availableBalance,
     safeToSpend,
     remainingDays,

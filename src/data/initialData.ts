@@ -1,4 +1,4 @@
-import { BudgetConfig, Transaction, Commitment, SavingsGoal, SpendingInsight } from '../types';
+import { BudgetConfig, Transaction, Commitment, SavingsGoal } from '../types';
 
 export const INITIAL_BUDGET: BudgetConfig = {
   totalBudget: 10000,

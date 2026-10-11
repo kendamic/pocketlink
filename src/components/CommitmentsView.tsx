@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Plus, Trash2, CheckCircle2, Clock, Calendar, Check, X } from 'lucide-react';
+import { Plus, Trash2, Calendar, Check, X } from 'lucide-react';
 import { useFinance } from '../context/FinanceContext';
-import { Commitment, TransactionCategory } from '../types';
+import { TransactionCategory } from '../types';
 import { formatINR } from '../utils/calculations';
 
 const CATEGORIES: TransactionCategory[] = [
@@ -18,7 +18,6 @@ const CATEGORIES: TransactionCategory[] = [
 export const CommitmentsView: React.FC = () => {
   const {
     budget,
-    updateTotalBudget,
     setBudget,
     commitments,
     addCommitment,
@@ -37,7 +36,7 @@ export const CommitmentsView: React.FC = () => {
   const [isAddingComm, setIsAddingComm] = useState(false);
   const [commName, setCommName] = useState('');
   const [commAmount, setCommAmount] = useState('');
-  const [commDueDate, setCommDueDate] = useState(new Date().toISOString().split('T')[0]);
+  const [commDueDate, setCommDueDate] = useState(() => new Date().toISOString().split('T')[0]);
   const [commCategory, setCommCategory] = useState<TransactionCategory>('Bills');
   const [commError, setCommError] = useState('');
 

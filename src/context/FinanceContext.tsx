@@ -4,7 +4,6 @@ import {
   Commitment,
   SavingsGoal,
   BudgetConfig,
-  SpendingInsight,
 } from '../types';
 import {
   INITIAL_BUDGET,

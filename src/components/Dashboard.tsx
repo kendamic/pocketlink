@@ -52,7 +52,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate, onOpenAddExpen
 
   // Prepare chart data for categories with spending > 0
   const chartData = Object.entries(categoryTotals)
-    .filter(([_, val]) => val > 0)
+    .filter(([, val]) => val > 0)
     .map(([name, value]) => ({ name, value }));
 
   const recentTransactions = transactions.slice(0, 5);
@@ -252,7 +252,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onNavigate, onOpenAddExpen
               {/* Category Progress Bars */}
               <div className="space-y-2.5 mt-2">
                 {Object.entries(categoryTotals)
-                  .filter(([_, val]) => val > 0)
+                  .filter(([, val]) => val > 0)
                   .sort((a, b) => b[1] - a[1])
                   .slice(0, 4)
                   .map(([cat, val]) => {

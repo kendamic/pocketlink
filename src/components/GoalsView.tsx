@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PiggyBank, Plus, Trash2, Lock, Unlock, Target, Calendar } from 'lucide-react';
+import { Plus, Trash2, Lock, Unlock, Calendar } from 'lucide-react';
 import { useFinance } from '../context/FinanceContext';
 import { formatINR, calculatePercentage } from '../utils/calculations';
 import confetti from 'canvas-confetti';

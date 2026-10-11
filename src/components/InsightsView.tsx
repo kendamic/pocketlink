@@ -22,7 +22,7 @@ export const InsightsView: React.FC = () => {
 
   // 1. Highest spending category
   const sortedCategories = Object.entries(categoryTotals)
-    .filter(([_, val]) => val > 0)
+    .filter(([, val]) => val > 0)
     .sort((a, b) => b[1] - a[1]);
 
   if (sortedCategories.length > 0) {
